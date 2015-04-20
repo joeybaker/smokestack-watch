@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.2.1 | 2015-04-20
+* fix: transform/plugin calls
+
 ## v0.2.0 | 2015-04-20
 * Add: timeout option
 * Add: Now logging bundle errors
@@ -8,4 +11,5 @@
 
 ## v0.1.0 | 2015-04-17
 Init
+
 
