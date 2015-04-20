@@ -47,6 +47,7 @@ smokestackWatch({
   , transforms: []
   , plugins: []
   , patterns: []
+  , timeout: 300000 // 5 minutes
 })
 ```
 
@@ -68,6 +69,9 @@ Pass transform options to browserify.
 
 ### `p` or `plugin`
 Pass plugin options to browserify.
+
+### `timeout`
+Timeout time for smokestack. Defaults to 5 minutes.
 
 ## Tests
 Tests are in [tape](https://github.com/substack/tape) and code coverage is run though [covert](https://github.com/substack/covert). But are not at all complete.

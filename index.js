@@ -46,6 +46,7 @@ module.exports = function smokestackWatch (options){
       ))
       .pipe(smokestack({
         browser: options.browser || 'chrome'
+        , timeout: options.timeout || 1000 * 60 * 5
       }))
       .pipe(tapSpec())
       .pipe(process.stdout)

@@ -15,6 +15,7 @@ var minimist = require('minimist')
     , transforms: !Array.isArray(transforms) && transforms ? [transforms] : transforms
     , plugins: !Array.isArray(plugins) && plugins ? [plugins] : plugins
     , patterns: argv._.length ? argv._ : void 0
+    , timeout: argv.timeout
   }, {
     debug: true
     , delay: 0
@@ -23,6 +24,7 @@ var minimist = require('minimist')
     , transforms: []
     , plugins: []
     , patterns: ['test/*.js']
+    , timeout: 5000
   })
 
 require('../index.js')(options)
