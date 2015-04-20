@@ -60,8 +60,8 @@ module.exports = function smokestackWatch (options){
   }, [])
   bundle.add(tests)
 
-  options.transforms.forEach(bundle.transform)
-  options.plugins.forEach(bundle.plugin)
+  options.transforms.forEach(bundle.transform.bind(bundle))
+  options.plugins.forEach(bundle.plugin.bind(bundle))
 
   bundle = watchify(bundle, {delay: options.debug || 0})
   bundle.on('update', rebundle)
