@@ -34,6 +34,7 @@ module.exports = function smokestackWatch (options){
   rebundle = function rebundle () {
     console.info('==== Compiling ====')
     bundle.bundle()
+      .on('error', console.error.bind(console))
       .pipe(through(
         function noopTransform (chunk, enc, cb){
           cb(null, chunk)
