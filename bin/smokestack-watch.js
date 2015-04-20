@@ -12,9 +12,9 @@ var minimist = require('minimist')
     , delay: argv.delay
     , ignoreWatch: argv['ignore-watch']
     , browser: argv.browser
-    , transforms: Array.isArray(transforms) ? transforms : [transforms]
-    , plugins: Array.isArray(plugins) ? plugins : [plugins]
-    , patterns: argv._
+    , transforms: !Array.isArray(transforms) && transforms ? [transforms] : transforms
+    , plugins: !Array.isArray(plugins) && plugins ? [plugins] : plugins
+    , patterns: argv._.length ? argv._ : void 0
   }, {
     debug: true
     , delay: 0

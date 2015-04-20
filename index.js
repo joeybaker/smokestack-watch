@@ -53,7 +53,6 @@ module.exports = function smokestackWatch (options){
 
   // prepend tap-closer
   bundle.add('tap-closer/bundle.js')
-
   // find the tests from the pattern
   tests = testPatterns.reduce(function globPattern (files, pattern){
     return files.concat(glob.sync(pattern))
