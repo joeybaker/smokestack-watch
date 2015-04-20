@@ -15,6 +15,7 @@ Use watchify to run tape tests with smokestack
   - [`browser="chrome"`](#browser=chrome)
   - [`t` or `transform`](#t-or-transform)
   - [`p` or `plugin`](#p-or-plugin)
+  - [`timeout`](#timeout)
 - [Tests](#tests)
 - [Developing](#developing)
   - [Requirements](#requirements)
