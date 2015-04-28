@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.0 | 2015-04-28
+* Add: Remove tap-spec so that you can choose your own tap reporter
+
 ## v0.2.1 | 2015-04-20
 * fix: transform/plugin calls
 
@@ -11,5 +14,6 @@
 
 ## v0.1.0 | 2015-04-17
 Init
+
 
 
