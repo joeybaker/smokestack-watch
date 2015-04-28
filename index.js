@@ -4,13 +4,12 @@ var browserify = require('browserify')
   , smokestack = require('smokestack')
   , watchify = require('watchify')
   , path = require('path')
-  , tapSpec = require('tap-spec')
   , glob = require('glob')
   , through = require('through2')
   , cwd = process.cwd()
 
-module.exports = function smokestackWatch (options){
-  var testPatterns = options.patterns.map(function makeAbsolutePaths (pattern){
+module.exports = function smokestackWatch (options) {
+  var testPatterns = options.patterns.map(function makeAbsolutePaths (pattern) {
       return path.join(cwd, pattern)
     })
     , rebundle
@@ -36,10 +35,10 @@ module.exports = function smokestackWatch (options){
     bundle.bundle()
       .on('error', console.error.bind(console))
       .pipe(through(
-        function noopTransform (chunk, enc, cb){
+        function noopTransform (chunk, enc, cb) {
           cb(null, chunk)
         }
-        , function logThatTestingStarts (cb){
+        , function logThatTestingStarts (cb) {
           console.info('==== Testing ====')
           cb()
         }
@@ -48,14 +47,13 @@ module.exports = function smokestackWatch (options){
         browser: options.browser || 'chrome'
         , timeout: options.timeout || 1000 * 60 * 5
       }))
-      .pipe(tapSpec())
       .pipe(process.stdout)
   }
 
   // prepend tap-closer
   bundle.add('tap-closer/bundle.js')
   // find the tests from the pattern
-  tests = testPatterns.reduce(function globPattern (files, pattern){
+  tests = testPatterns.reduce(function globPattern (files, pattern) {
     return files.concat(glob.sync(pattern))
   }, [])
   bundle.add(tests)

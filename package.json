@@ -70,7 +70,6 @@
     "minimist": "^1.1.1",
     "smokestack": "^3.2.2",
     "tap-closer": "^1.0.0",
-    "tap-spec": "^3.0.0",
     "through2": "^0.6.5",
     "watchify": "^3.1.1"
   }
