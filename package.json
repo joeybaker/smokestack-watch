@@ -54,13 +54,13 @@
   "devDependencies": {
     "covert": "^1.0.1",
     "dmn": "^1.0.5",
-    "doctoc": "^0.7.1",
-    "ghooks": "^0.2.2",
+    "doctoc": "^0.13.0",
     "eslint": "^0.20.0",
+    "ghooks": "^0.3.2",
     "in-publish": "^1.1.1",
     "nodemon": "^1.2.1",
-    "nsp": "^0.4.2",
-    "tape": "^3.5.0"
+    "nsp": "^1.0.1",
+    "tape": "^4.0.0"
   },
   "dependencies": {
     "browserify": "^9.0.8",
