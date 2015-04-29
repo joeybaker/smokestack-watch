@@ -4,18 +4,19 @@ Use watchify to run tape tests with smokestack
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Install](#install)
 - [Usage](#usage)
 - [CLI flags](#cli-flags)
   - [`d` or `debug`](#d-or-debug)
-  - [`delay=0`](#delay=0)
-  - [`ignore-watch=true`](#ignore-watch=true)
-  - [`browser="chrome"`](#browser=chrome)
+  - [`delay=0`](#delay0)
+  - [`ignore-watch=true`](#ignore-watchtrue)
+  - [`browser="chrome"`](#browserchrome)
   - [`t` or `transform`](#t-or-transform)
   - [`p` or `plugin`](#p-or-plugin)
   - [`timeout`](#timeout)
+  - [`r <reporter module>` or `reporter=<reporter module>`](#r-reporter-module-or-reporterreporter-module)
 - [Tests](#tests)
 - [Developing](#developing)
   - [Requirements](#requirements)
