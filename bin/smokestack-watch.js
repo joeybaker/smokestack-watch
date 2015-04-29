@@ -3,7 +3,9 @@
 'use strict'
 
 var minimist = require('minimist')
-  , argv = minimist(process.argv.slice(2))
+  , argv = minimist(process.argv.slice(2), {
+    boolean: ['d', 'debug']
+  })
   , defaults = require('lodash.defaults')
   , transforms = argv.t || argv.transform
   , plugins = argv.p || argv.plugins
@@ -16,6 +18,7 @@ var minimist = require('minimist')
     , plugins: !Array.isArray(plugins) && plugins ? [plugins] : plugins
     , patterns: argv._.length ? argv._ : void 0
     , timeout: argv.timeout
+    , reporter: argv.r || argv.reporter
   }, {
     debug: true
     , delay: 0

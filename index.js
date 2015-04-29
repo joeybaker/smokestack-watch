@@ -12,6 +12,7 @@ module.exports = function smokestackWatch (options) {
   var testPatterns = options.patterns.map(function makeAbsolutePaths (pattern) {
       return path.join(cwd, pattern)
     })
+    , reporter = options.reporter
     , rebundle
     , bundle
     , tests
@@ -31,8 +32,7 @@ module.exports = function smokestackWatch (options) {
   bundle.setMaxListeners(Infinity)
 
   rebundle = function rebundle () {
-    console.info('==== Compiling ====')
-    bundle.bundle()
+    var stream = bundle.bundle()
       .on('error', console.error.bind(console))
       .pipe(through(
         function noopTransform (chunk, enc, cb) {
@@ -47,7 +47,14 @@ module.exports = function smokestackWatch (options) {
         browser: options.browser || 'chrome'
         , timeout: options.timeout || 1000 * 60 * 5
       }))
-      .pipe(process.stdout)
+      , reporterStream
+
+    console.info('==== Compiling ====')
+
+    if (reporter) {
+      reporterStream = stream.pipe(require(path.join(cwd, 'node_modules', reporter))())
+    }
+    (reporterStream || stream).pipe(process.stdout)
   }
 
   // prepend tap-closer

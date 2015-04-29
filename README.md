@@ -74,6 +74,9 @@ Pass plugin options to browserify.
 ### `timeout`
 Timeout time for smokestack. Defaults to 5 minutes.
 
+### `r <reporter module>` or `reporter=<reporter module>`
+Pass your tests through a reporter. e.g. `-r tap-spec`. This reporter must be installed in the working directory.
+
 ## Tests
 Tests are in [tape](https://github.com/substack/tape) and code coverage is run though [covert](https://github.com/substack/covert). But are not at all complete.
 
