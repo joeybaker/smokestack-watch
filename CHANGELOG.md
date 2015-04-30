@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.1 | 2015-04-30
+* Update browserify
+* fix travis
+
 ## v0.4.0 | 2015-04-28
 * Add: reporter option
 * Dev: update misc dev deps
@@ -18,6 +22,7 @@
 
 ## v0.1.0 | 2015-04-17
 Init
+
 
 
 
