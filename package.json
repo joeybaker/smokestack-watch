@@ -65,13 +65,13 @@
     "tape": "^4.0.0"
   },
   "dependencies": {
-    "browserify": "^9.0.8",
+    "browserify": "^10.0.0",
     "glob": "^5.0.5",
     "lodash.defaults": "^3.1.1",
     "minimist": "^1.1.1",
     "smokestack": "^3.2.2",
     "tap-closer": "^1.0.0",
     "through2": "^0.6.5",
-    "watchify": "^3.1.1"
+    "watchify": "^3.2.0"
   }
 }
